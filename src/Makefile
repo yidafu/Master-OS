@@ -15,7 +15,7 @@ OBJCOPY	= objcopy
 
 ASMBFLAGS	= -f elf -w-orphan-labels
 CFLAGS		= -c -Os -std=c99 -m32 -Wall -Wshadow -W -Wconversion -Wno-sign-conversion  -fno-stack-protector -fomit-frame-pointer -fno-builtin -fno-common  -ffreestanding  -Wno-unused-parameter -Wunused-variable
-LDFLAGS		= -macosx_version_min 10.7 -static @hello.lds -n -map HelloOS.map
+LDFLAGS		= -s -static -T hello.lds -n -Map HelloOS.map 
 OJCYFLAGS	= -S -O binary
 
 HELLOOS_OBJS :=
